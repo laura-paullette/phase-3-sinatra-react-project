@@ -38,6 +38,8 @@ gem "require_all", "~> 3.0"
 group :development do
   gem "pry", "~> 0.14.1"
 
+
+
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
   gem "rerun"
@@ -50,3 +52,5 @@ group :test do
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
 end
+
+gem 'wdm', '~> 0.1.0'
