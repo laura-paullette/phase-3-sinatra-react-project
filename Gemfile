@@ -38,12 +38,12 @@ gem "require_all", "~> 3.0"
 group :development do
   gem "pry", "~> 0.14.1"
 
-
-
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
   gem "rerun"
 end
+
+gem "faker", "~> 2.18"
 
 # These gems will only be used when we are running tests
 group :test do
@@ -53,4 +53,7 @@ group :test do
   gem "rspec-json_expectations", "~> 2.2"
 end
 
-gem 'wdm', '~> 0.1.0'
+ group :production do
+      gem 'puma', '~> 6.1'
+      gem 'pg', '~> 1.4'
+  end
