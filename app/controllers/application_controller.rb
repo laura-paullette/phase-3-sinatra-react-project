@@ -46,11 +46,17 @@ class ApplicationController < Sinatra::Base
     dog = Dog.find(params[:id])
     dog.to_json(include: :applicants)
   end
+ delete '/dogs/:id' do
+    dog = Dog.find(params[:id])
+    dog.destroy
+    dog.to_json
+  end
 
   get '/applicants' do
     applicant = Applicant.all
     applicant.to_json
   end
+
 
 
   post '/applicants' do
